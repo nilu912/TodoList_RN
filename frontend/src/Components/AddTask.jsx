@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-function AddTask() {
+function AddTask({addTaskToList}) {
   const [data, setData] = useState({ title: "", task: "" });
   const handleChanges = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -18,6 +18,8 @@ function AddTask() {
     });
     const response = await request.json();
     console.log(response);
+    addTaskToList(data);
+    setData({title: '', task: ''});
     // console.log(data);
   };
   return (

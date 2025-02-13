@@ -7,7 +7,7 @@ function Tasks({ dataList }) {
       <div className="w-1/2 border-black border-1 mx-auto rounded-sm bg-sky-100 p-4">
         {dataList.length > 0 ? (
           dataList.map((item, index) => (
-            <Task title={item.title} task={item.task} />
+            <Task key={index} title={item.title} task={item.task} />
           ))
         ) : (
           <p>Data not found!</p>
