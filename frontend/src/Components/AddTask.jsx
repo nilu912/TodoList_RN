@@ -31,6 +31,7 @@ function AddTask({addTaskToList}) {
           className="text-black border-black border-1 p-1 rounded-sm w-full"
           type="text"
           name="title"
+          value={data.title}
           onChange={handleChanges}
           placeholder="Enter your task title!"
         ></input>
@@ -39,6 +40,7 @@ function AddTask({addTaskToList}) {
           className="text-black border-black border-1 p-1 rounded-sm w-full"
           type="text"
           name="task"
+          value={data.task}
           onChange={handleChanges}
           placeholder="Enter your task!"
         ></input>
