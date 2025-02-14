@@ -8,6 +8,8 @@ function AddTask({addTaskToList}) {
 
   const sendData = async (e) => {
     e.preventDefault();
+    if(data.title.trim()=="" || data.task.trim()=="")
+      alert("Please Fill the data first.")
     let endpoint = "http://localhost:5000/api/addTask";
     const request = await fetch(endpoint, {
       method: "post",
